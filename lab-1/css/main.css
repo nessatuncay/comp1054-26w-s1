@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&display=swap');
+
+
+
+body {
+    background-color: #666;
+}
+
+#page {
+    width: 70%;
+    background-color: white;
+    margin: 50px auto;
+    padding: 5%;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+#page header h1
+{
+    text-align: left;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: inline-block;
+    border: 2.5px solid black;
+}
+
+#page header h2
+{
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    line-height: 1;
+}
+
+#page header p
+{
+    text-align: center;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        font-weight: bold;
+        line-height: 2.5;
+}
+
+#page h4
+{
+    text-align: left;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    line-height: 4;
+    font-weight: bold;
+}
+
+
+
+/* Multi-column layout
+-------------------------------------------------- */
+main {
+    column-count: 3;
+}
+
+main p:first-child {
+    margin-top: 0;
+}
