@@ -17,8 +17,32 @@ html {
 	margin: 0 auto;
 }
 /* STEP 3a: Basic styling for the DETAILS element */
+details 
+{
+	border: 5px solid grey;
+	padding: 0 1rem;
+	background-color: lightgrey;
+}
+
+/* Animate open and close of panels */
+details div
+{
+	transition: height 1s ease;
+	overflow: hidden;
+}
+
+details:not([open]) div 
+{
+	height: 0;
+}
+
+details[open] div
+{
+	height: auto;
+}
 
 /* STEP 3b: Adjacent sibling DETAILS elements don't need a top border */
+
 
 /* STEP 3c: Brighten up the currently open DETAILS panel (the browser adds the "open" attribute to the active element) */
 
@@ -29,10 +53,19 @@ html {
 /* STEP 5b: Use the ::after pseudoelement with the SECTION to add a "+" character imploring user to "open" the panel */
 
 /* STEP 5c: If the panel is open, then change it to a "-" character to allow user to close it again - proceed to accordion.js for the next step */
-
-/* STEP 10: Add rounded corners to the first and last DETAILS elements */
-details:first-of-type {
-	
+details[open] summary::after 
+{
+	content: "-";
 }
 
+/* STEP 10: Add rounded corners to the first and last DETAILS elements */
+details:first-of-type 
+{
+	border-radius: 1rem 1rem 0 0;
+}
+
+details:last-of-type 
+{
+	border-radius: 0 0 1rem 1rem;
+}
 /* Thanks to Greg Gibson (https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/) and Chris Coyier (https://css-tricks.com/quick-reminder-that-details-summary-is-the-easiest-way-ever-to-make-an-accordion/) for some outstanding tips and tricks for styling <details> and <summary> */
